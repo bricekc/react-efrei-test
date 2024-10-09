@@ -1,10 +1,7 @@
-import React from 'react';
-import ListBook from "../components/ListBook.jsx";
+import ListBook from '../components/ListBook.jsx';
 
-function BookPage(props) {
-    return (
-        <ListBook/>
-    );
+function BookPage() {
+  return <ListBook />;
 }
 
 export default BookPage;
