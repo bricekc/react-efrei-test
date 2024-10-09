@@ -5,6 +5,8 @@ import Welcome from "./pages/Welcome.jsx";
 import Counter from "./pages/Counter.jsx";
 import MultipleList from "./pages/MultipleList.jsx";
 import BookPage from "./pages/BookPage.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header.jsx";
 
 function App() {
     const [name, setName] = useState('Vite')
@@ -13,11 +15,8 @@ function App() {
 
     return(
         <>
-            <div className="header">
-                <Link to={"/welcome"} >welcome</Link>
-                <Link to={"/counter"} >counter</Link>
-                <Link to={"/listMultiple"} >list multiple 5</Link>
-                <Link to={"/listBook"} >list book</Link>
+            <div className="row">
+                <Header/>
             </div>
             <Routes>
                 <Route path="/welcome" element={<Welcome name={name}/>}/>
