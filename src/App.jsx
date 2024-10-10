@@ -10,6 +10,7 @@ import Header from './components/Header.jsx';
 import Users from './pages/Users.jsx';
 import UserProfile from './components/UserProfile.jsx';
 import Register from './pages/Register.jsx';
+import Login from './pages/Login.jsx';
 
 function App() {
   const [name, setName] = useState('Vite');
@@ -27,6 +28,7 @@ function App() {
         <Route path="/listUser" element={<Users />} />
         <Route path="/listUser/:id" element={<UserProfile />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
