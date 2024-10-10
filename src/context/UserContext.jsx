@@ -9,6 +9,7 @@ const UserProvider = ({ children }) => {
     console.log('logInfos', logInfos);
     try {
       setUser(logInfos);
+      localStorage.setItem('user', JSON.stringify({ ...logInfos, name: logInfos }));
     } catch (error) {
       console.error('Failed to login:', error);
     }

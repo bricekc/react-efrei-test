@@ -1,12 +1,12 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { UserContext } from '../context/UserContext.jsx';
 
 function Login() {
   const navigate = useNavigate();
-  const { login } = useState(UserContext);
+  const { login } = useContext(UserContext);
   return (
     <Formik
       initialValues={{
