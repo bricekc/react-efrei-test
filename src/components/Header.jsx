@@ -6,6 +6,7 @@ function Header() {
   const location = useLocation();
   const { pathname } = location;
   const { user } = useContext(UserContext);
+  console.log('user', user);
   return (
     <ul className="nav nav-tabs">
       {user}
