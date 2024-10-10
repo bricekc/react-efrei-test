@@ -22,8 +22,8 @@ function Login() {
             },
             body: JSON.stringify(values)
           });
-          console.log(await postForm.json());
-          login('coucou');
+          const data = await postForm.json();
+          login(data.user.firstName);
           navigate('/', { replace: true });
         } catch (error) {
           console.log(error);
