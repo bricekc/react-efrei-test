@@ -17,6 +17,9 @@ function Login() {
         try {
           const postForm = await fetch('https://express-mongodb-k76a.onrender.com/api/auth/login', {
             method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
             body: JSON.stringify(values)
           });
           console.log(await postForm.json());
